@@ -46,6 +46,25 @@ function setval(idstr,value)
 		else
 			print "Bz is too large"
 		endif
+		
+ // the commented commands might be used for ramping keithly using the function setval.you should commentize the following commands to use these commands. 		
+ //       elseif(!cmpstr(idstr,"keithleyI",2))
+ //           keithleyID = find_instr_id("KeithleyI")
+ //           if(numtype(keithleyID)!=0)
+ //                  abort "ERROR: no such device found"
+ //           else
+ //                  rampK2400current(keithleyID, value) //nA
+ //           endif
+ //       elseif(!cmpstr(idstr,"keithleyV",2))
+ //           keithleyID = find_instr_id("KeithleyV")
+ //           if(numtype(keithleyID)!=0)
+ //               abort "ERROR: no such device found"
+ //           else
+ //               rampK2400Voltage(keithleyID, value) //mV
+ //       endif
+		
+		
+		
 	elseif(!cmpstr(idstr,"keithleyI",2))
 		//rampK2400current(idstr, value*1e-9)
 	elseif(!cmpstr(idstr,"keithleyV",2))
