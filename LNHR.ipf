@@ -108,7 +108,7 @@ Function SetDAC(chan, mV) 	//set chan # chan to Voltage mV in millivolts
 	//	wave DACRange = DACRange			//Taras
 	string/g cmdstr
 	DAC[chan]=mv
-	mV=mv/1000*dacdivider[chan]-DACOffset[chan]/1000
+	mV=mv/1000*dacdivider[chan]-DACOffset[chan]/1000*dacdivider[chan]
 	string sumstring,s1,s2
 	s1=num2str(chan)+" "
 	sprintf s2,"%x" (mV+10)/20*16776960
